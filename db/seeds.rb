@@ -1,5 +1,5 @@
 require 'faker'
-# ,'grocery','work','school','bitches'
+
 ['chores'].each do |list_name|
   current_list = List.new(name: list_name)
   5.times do
