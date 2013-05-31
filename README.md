@@ -1,74 +1,23 @@
 # ActiveRecord TODOs
 
-## Before You Get Started
+This challenge is to build a functioning Todo application using a database and command line interaction. You should leverage what you learned in Todo 1.0 and build upon that design, improving your OO implementation.
 
-Before you get started...
+From the user's perspective, the final product will look similar to the Todo 1.0. We are still using the command line and we want to build something that works like this:
 
-1.  **Install Correct Version of SQLite3**
+$ ruby todo.rb add Bake a delicious blueberry-glazed cheesecake
+$ ruby todo.rb list
+$ ruby todo.rb delete <task_id>
+$ ruby todo.rb complete <task_id>
 
-    Run the following from the command line:
+Learning Goals
+This application has all the moving parts of an MVC application: user input, display code, and data persistence. In addition it leverages the power of Active Record to manipulate a database of Todo records.
 
-    ```text
-    which sqlite3
-    ```
+You will need to start with a solid OO design and implement a framework that will allow you to utilize Active Record.
 
-    This should either print out `/usr/bin/sqlite3` or `/usr/local/bin/sqlite3`.  We want it to print out `/usr/local/bin/sqlite3`.  If it prints out `/usr/bin/sqlite3` run the following from the command line:
+In your design, it's important to think about what responsibilities this application has to fulfill.
 
-    ```text
-    brew link sqlite3
-    ```
+Keep things like the single responsibility principle and separation of concerns in mind as you decide what objects and classes belong in your application.
 
-    Now run `which sqlite3` again and make sure it says `/usr/local/bin/sqlite3`.  If it still doesn't find a staff member to help!
+As you work through the iterations, pay close attention to how change impacts your application. When a new feature is added how many files do you have to change? How frustrating is it to make those changes?
 
-2.  **Run `bundle` from the application root directory**
-
-    From your application root directory, run the following command to install any necessary gems:
-
-    ```text
-    $ bundle
-    ```
-
-    This will install all the gems listed in the `Gemfile`.
-
-## Getting Started
-
-You're now ready to rock.  Run
-
-```text
-$ rake -T
-```
-
-to see the rake tasks available to you.  Run `rake db:create` to create the (empty) database file.  Run `rake db:migrate` to run migrations that have yet to be applied.
-
-Create a file in the application root directory, e.g., `todo.rb`, to act as your main program.
-
-<table class="table table-striped table-bordered">
-  <tr>
-    <th>File or Directory</th>
-    <th>Purpose</th>
-  </tr>
-
-  <tr>
-    <td><code>app/models/</code></td>
-    <td>Location of your ActiveRecord models; filenames should be singular and `snake_case`.  These are autoloaded.</td>
-  </tr>
-
-  <tr>
-    <td><code>app/controllers/</code></td>
-    <td>Location of any controller code; this isn't auto-loaded, so you'll have to manually include your controllers</td>
-  </tr>
-
-  <tr>
-    <td><code>db/seeds.rb</code</td>
-    <td>Place any database seed code in this file.  You automatically have access to your ActiveRecord models.  Run using `rake db:seed`.</td>
-  </tr>
-  <tr>
-    <td><code>spec/</code></td>
-    <td>Location of your specs, using [RSpec](http://rspec.info/).  Run with `rake spec`.</td>
-  </tr>
-  <tr>
-    <td><code>config/application.rb</code></td>
-    <td>Your main application file; **do not** add user-facing code to this file.  Your application should include this file.</td>
-  </tr>
-</table>
-
+You will be using Git and GitHub to work with your group on this challenge. Here is the DBC Git Process you should follow. Every member of your group should commit to the code base at least once during the day.
